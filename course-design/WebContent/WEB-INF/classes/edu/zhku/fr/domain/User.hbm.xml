@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.fr.domain">
+	<class name="User" table="t_user">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="account"/>
+		<property name="name"/>
+		<property name="password"/>
+		<property name="sex"/>
+		<property name="email"/>
+		<property name="regTime" type="timestamp"/>
+		<property name="active"/>
+		
+		<!-- roles属性是本类和Role的多对多关联关系 -->
+		<set name="roles" table="t_role_user" lazy="true">
+			<key column="userId" />
+			<many-to-many class="Role" column="roleId"/>
+		</set>
+	</class>
+</hibernate-mapping>       

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cdesign" default="build" basedir=".">
+	<property name="dest.base.dir" value="/home/arvin/rep/code/cdesign/WebContent"/>
+	<property name="dest.compile.dir" value="${dest.base.dir}/WEB-INF/classes"/>
+	<property name="dest.config.dir" value="${dest.compile.dir}"/>
+	
+	<target name="clean" >
+		<delete dir="${dest.compile.dir}/edu/zhku/fr/log"/>
+		<delete file="${dest.compile.dir}/log.cf"/>
+	</target>
+	
+	<target name="init" depends="clean">
+    	<mkdir dir="${dest.base.dir}"/>
+		<mkdir dir="${dest.compile.dir}"/>
+		<mkdir dir="${dest.config.dir}"/>
+		<!-- copy static resource -->
+		<copy todir="${dest.config.dir}" file="src/log.cf"/>
+    </target>
+	
+	<target name="compile" depends="init">
+		<javac destdir="${dest.compile.dir}" includes="**/*.java" srcdir="." excludes="test/**" includeantruntime="false">
+		</javac>
+	</target>
+	
+	<target name="build" depends="compile">
+	</target>
+</project>

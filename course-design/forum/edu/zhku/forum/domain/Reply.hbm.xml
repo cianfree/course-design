@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.forum.domain">
+	<class name="Reply" table="t_reply">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="title"/>
+		<property name="content" type="text" length="65536"/>
+		<property name="postTime" type="timestamp"/>
+		
+		<!-- author属性，是本类和User的一对一单向，基于外键，本类设置外键 -->
+		<many-to-one name="author" class="edu.zhku.fr.domain.User" column="authorId"/>
+		
+		<!-- topic属性，是本类和Topic的多对一 -->
+		<many-to-one name="topic" class="Topic" column="topicId"/>
+	</class>
+</hibernate-mapping>       

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.fr.domain">
+	<class name="Privilege" table="t_priv">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" unique="true"/>
+		<property name="action"/>
+		<property name="active" type="boolean"/>
+		
+		<!-- parent属性，是本类和Privilege[上级]的多对一 -->
+		<many-to-one name="parent" class="Privilege" column="parentId" not-null="false"/>
+		
+		<!-- children属性，是本类和Privilege[下级]的一对多 -->
+		<set name="children" lazy="false" order-by="id ASC" cascade="save-update,persist,delete">
+			<key column="parentId"/>
+			<one-to-many class="Privilege"/>
+		</set>
+		
+		<!-- roles属性，是本类和Role的多对多 -->
+		<set name="roles" table="t_priv_role">
+			<key column="privId"/>
+			<many-to-many class="Role" column="roleId"/>
+		</set>
+	</class>
+</hibernate-mapping>       

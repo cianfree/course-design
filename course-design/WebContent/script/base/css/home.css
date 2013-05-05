@@ -1,0 +1,123 @@
+.loginBody {
+	background-image: url(images/dly_1.gif);
+	background-repeat: repeat-x;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.videoDiv {
+	margin-top: 0px;
+	width: 987px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+/*DIV水平垂直*/
+.divHCenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mainDiv {
+	width: 987px;
+	height: 307px;
+	margin-top: 0px;
+}
+
+.subjectDiv {
+	float: left;
+	background-image: url(images/zhkupoj.gif);
+	background-repeat: no-repeat;
+	width: 572px;
+	height: 307px;
+	margin-left: 0px;
+}
+
+.loginFormDiv {
+	float: left;
+	width: 292px;
+	height: 307px;
+	background-image: url(images/dly_6.gif);
+	background-repeat: no-repeat;
+}
+
+.regFormDiv {
+	float: left;
+	width: 292px;
+	height: 307px;
+	background-image: url(images/dly2_6.gif);
+	background-repeat: no-repeat;
+}
+
+.loginDiv,.regDiv {
+	margin-top: 80px;
+	height: 118px;
+	padding-top: 10px;
+	padding-left: 12px;
+}
+
+.loginDiv span,.regDiv span {
+	white-space: pre;
+}
+
+.loginFormDiv input,
+.regFormDiv input {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid black;
+	background-color: transparent;
+	width: 180px;
+	font-size: 15px;
+}
+
+.message {
+	margin-left: 20px;
+	color: red;
+	font-size: 15px;
+	margin-top: 0px;
+	height: 26px;
+	padding-top: 8px;
+}
+
+.copyright {
+	width: 987px;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	color: white;
+}
+
+.email,.name {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.loginOpration {
+	/*border: 1px solid red;*/
+	margin-top: 10px;
+}
+
+.loginSubmit {
+	/*border: 1px solid blue;*/
+	float: right;
+	margin-right: 10px;
+	width: 82px;
+	height: 47px;
+}
+
+.loginSubmit img:hover {
+	cursor: pointer;
+}
+
+.loginRegister {
+	float: left;
+	margin-left: 5px;
+	padding-top: 25px;
+	padding-right: 10px;
+	padding-left: 2px;
+	font-style: italic;
+}
+

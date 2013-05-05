@@ -1,0 +1,76 @@
+.description {
+	font-size: 15px;
+	background-color: transparent;
+}
+
+.mainContent {
+	text-align: center;
+}
+
+.divContainer {
+	border: 1px dashed blue;
+	width: 100%;
+	height: 520px;
+	padding: 3px 3px 3px 3px;
+}
+
+.tip {
+	color: red;
+}
+
+.abtn {
+	text-decoration: none;
+	border: 1px solid blue;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: #F0F0F0;
+	color: black;
+}
+
+.abtn:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #4891C6;
+}
+
+.myoverlay {
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	text-align: center;
+}
+
+.divButton {
+	border: 1px solid blue;
+	margin-right: 10px;
+	width: 80px;
+	background-color: #F0F0F0;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+
+.divButton:hover {
+	background-color: #0970BB;
+	cursor: pointer;
+	color: white;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.disabled {
+	font: gray;
+}

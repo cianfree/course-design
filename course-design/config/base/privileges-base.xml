@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<privs>
+	<!-- 一个模块作为一个权限组 -->
+	<top-privilege name="系统管理" action="systemManage">
+		<!-- 第二级别显示在下拉菜单中 -->
+		<priv name="用户管理" action="user/userList">
+			<!-- 第三级别的是在页面中出现的，一般只有三级 -->
+			<sub-priv name="用户列表" action="user/userList" />
+			<sub-priv name="编辑用户" action="user/editUser" />
+			<sub-priv name="保存用户" action="user/saveUser" />
+			<sub-priv name="更新用户" action="user/updateUser" />
+			<sub-priv name="删除用户" action="user/deleteUser" />
+			<sub-priv name="初始化密码" action="user/initPassword" />
+		</priv>
+		<priv name="角色管理" action="role/roleList">
+			<sub-priv name="角色列表" action="role/roleList" />
+			<sub-priv name="编辑角色" action="role/editRole" />
+			<sub-priv name="保存角色" action="role/saveRole" />
+			<sub-priv name="更新角色" action="role/updateRole" />
+			<sub-priv name="删除角色" action="role/deleteRole" />
+		</priv>
+	</top-privilege>
+
+
+	<top-privilege name="个人设置" action="personalSetup">
+		<priv name="个人信息" action="personal/personalInfo">
+			<sub-priv name="修改个人信息" action="personal/updateUserInfo" />
+		</priv>
+		<priv name="个人密码" action="personal/personalPassword">
+			<sub-priv name="修改个人密码" action="personal/updateUserPassword" />
+		</priv>
+	</top-privilege>
+</privs>

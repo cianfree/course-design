@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>EPOJS</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+	</welcome-file-list>
+
+	<!-- Ajax服务 -->
+	<servlet>
+		<servlet-name>POJAjaxDispatcher</servlet-name>
+		<servlet-class>edu.zhku.fr.ajax.POJAjaxDispatcher</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>moduleConfig</param-name>
+			<param-value>ajaxmodule.properties</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>POJAjaxDispatcher</servlet-name>
+		<url-pattern>/req.aj</url-pattern>
+	</servlet-mapping>
+		
+	<!-- 配置Spring的核心Servlet -->
+	<servlet>
+		<servlet-name>Spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:applicationContext.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Spring</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 系统模块配置文件 -->
+	<context-param>
+		<param-name>programModulesConfigLocation</param-name>
+		<param-value>classpath:frame/module-config.xml</param-value>
+	</context-param>
+	
+	<!-- Hibernate核心配置 文件-->
+	<context-param>
+		<param-name>hibernateOfSpringConfigLocation</param-name>
+		<param-value>classpath:frame/applicationContext-hibernate.xml</param-value>
+	</context-param>
+	
+	<!-- Base module config -->
+	<context-param>
+		<param-name>baseModuleConfigLocation</param-name>
+		<param-value>classpath:base/base-config.xml</param-value>
+	</context-param>
+	
+	<!-- error page  -->
+	<context-param>
+		<param-name>errorPage</param-name>
+		<param-value>redirect:/frame/error.html</param-value>
+	</context-param>
+	
+	<!-- POJ角色 -->
+	<context-param>
+		<param-name>studentRoleName</param-name>
+		<param-value>学生用户</param-value>
+	</context-param>
+	<context-param>
+		<param-name>teacherRoleName</param-name>
+		<param-value>教师用户</param-value>
+	</context-param>
+	
+	<!-- Spring主配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>edu.zhku.fr.listener.FrameLoaderListener</listener-class>
+	</listener>
+	
+	<!-- 配置Spring编码过滤器 -->
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 配置权限过滤器 -->
+	<filter>
+		<filter-name>CheckPrivilegeFilter</filter-name>
+		<filter-class>edu.zhku.fr.filter.CheckPrivilegeFilter</filter-class>
+		<init-param>
+			<param-name>noPrivUrl</param-name>
+			<param-value>frame/noPrivilege.html</param-value>
+		</init-param>
+		<init-param>
+			<param-name>noModuleUrl</param-name>
+			<param-value>frame/noModuleDeploy.html</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CheckPrivilegeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 使用自定义标签 -->
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/pojtag</taglib-uri>
+			<taglib-location>/WEB-INF/tld/pojtag.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/pojfun</taglib-uri>
+			<taglib-location>/WEB-INF/tld/pojfun.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

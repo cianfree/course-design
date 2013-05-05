@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.poj.domain">
+	<class name="Workout" table="t_workout">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="workTime" type="timestamp"/>
+		<property name="state"/>
+		<property name="attemptTimes" type="int"/>
+
+		<!-- worker属性是本类和User的一对一单向关联 -->
+		<many-to-one name="worker" class="edu.zhku.fr.domain.User" column="userId" not-null="false"/>
+		
+		<!-- problem是本类和Problem的多对一单向关联 -->
+		<many-to-one name="problem" class="Problem" column="problemId" not-null="false"/>
+	</class>
+</hibernate-mapping>     

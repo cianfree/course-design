@@ -1,0 +1,103 @@
+table {
+	border: 1px solid #4891C6;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table thead tr td {
+	background-color: #EAF2D3;
+	border-collapse: collapse;
+	border: 1px solid #4891C6;
+	color: white;
+	font-size:1.1em;
+	padding-top:5px;
+	padding-bottom:4px;
+	color:#ffffff;
+}
+
+table thead tr td {
+	background-color: #4891C6;
+	border-collapse: collapse;
+	border: 1px solid #4891C6;
+	color: white;
+	font-size:1.1em;
+	padding-top:5px;
+	padding-bottom:4px;
+	color:#ffffff;
+	font-weight: bold;
+}
+
+table caption {
+	border-bottom: 1px solid white;
+	border-collapse: collapse;
+	color: white;
+	font-size:1.1em;
+	padding-top:6px;
+	padding-bottom:10px;
+	padding-right: 10px;
+	color:BLACK;
+	font-weight: bold;
+	text-align: left;
+	border: 1px solid #4891C6;
+}
+
+table tbody tr td {
+	border-collapse: collapse;
+	border: 1px solid #4891C6;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+table tbody span:hover {
+	border-bottom: 1px solid blue;
+	cursor: pointer;
+	color: blue;
+}
+
+table tfoot tr td {
+	border-collapse: collapse;
+	border: 1px solid #4891C6;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-right: 10px;
+	text-align: left;
+}
+
+table tfoot tr td a {
+	border: 1px solid blue;
+	background-color: #F0F0F0;
+	color: black;
+	padding: 1px auto 1px 2px;
+	text-align: center;
+	text-decoration: none;
+}
+
+table tfoot tr td a:hover {
+	cursor: pointer;
+	background-color: #4891C6;
+	color: white;
+}
+
+tbody td a {
+	text-decoration: none;
+	color: black;
+}
+
+tbody td a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+table tfoot .oprationDiv {
+	float: right;
+	margin-top: 5px;
+}
+
+.oddTr {
+	background-color: WHITE;
+}
+
+.evenTr {
+	background-color: #EAF2D3;
+}

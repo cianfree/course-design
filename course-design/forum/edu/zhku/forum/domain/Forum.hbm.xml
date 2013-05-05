@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.forum.domain">
+	<class name="Forum" table="t_forum">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name"/>
+		<property name="description"/>
+		<property name="position"/>
+		<property name="topicCount"/>
+		<property name="articleCount"/>
+		
+		<!-- lastTopic属性，是本类和Topic的一对一 ，基于外键，本类设置外键 -->
+		<many-to-one name="lastTopic" class="Topic" column="lastTopicId" cascade="delete"/>
+		
+		<!-- topics属性，是本类和Topic的一对多 -->
+		<set name="topics" cascade="delete">
+			<key column="forumId"/>
+			<one-to-many class="Topic"/>
+		</set>
+	</class>
+</hibernate-mapping>       

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.poj.domain">
+	<class name="Course" table="t_course">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" length="50"/>
+		<property name="description" length="255"/>
+		<property name="buildTime" type="timestamp"/>
+
+		<!-- worker属性是本类和User的一对一单向关联 -->
+		<many-to-one name="owner" class="edu.zhku.fr.domain.User" column="ownerId" not-null="false" lazy="false"/>
+		
+		<!-- students是本类和User的一对多单向关联 -->
+		<set name="students" table="t_course_student" lazy="false" cascade="save-update">
+			<key column="courseId"/>
+			<many-to-many class="edu.zhku.fr.domain.User" column="userId"/>
+		</set>
+	</class>
+</hibernate-mapping>     

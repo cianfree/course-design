@@ -1,0 +1,54 @@
+.pagingBar {
+	padding: 3px 2px 3px 0px;
+	text-align: center;
+}
+
+.pagingBar .first,
+.pagingBar .prev,
+.pagingBar .next,
+.pagingBar .last {
+	float: left;
+	border: 1px solid blue;
+	width: 50px;
+	background-color: #F0F0F0;
+	margin-left: 5px;
+}
+
+.pagingBar .first:hover,
+.pagingBar .prev:hover,
+.pagingBar .page:hover,
+.pagingBar .selPage:hover,
+.pagingBar .next:hover,
+.pagingBar .last:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #4891C6;
+}
+
+.pagingBar .page {
+	float: left;
+	border: 1px solid blue;
+	width: 20px;
+	margin-left: 5px;
+}
+
+.pagingBar .selPage {
+	float: left;
+	border: 1px solid blue;
+	width: 20px;
+	background-color: #4891C6;
+	color: white;
+	margin-left: 5px;
+}
+
+.pagingBar .total {
+	float: left;
+	margin-left: 10px;
+	border-bottom: 1px solid blue;
+	font-style: italic;
+}
+
+.pagingBar .total:hover {
+	color: red;
+	cursor: pointer;
+}

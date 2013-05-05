@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.poj.domain">
+	<class name="Homework" table="t_hw">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="postTime"/>
+
+		<!-- course属性是本类和Course的多对一单向关联 -->
+		<many-to-one name="course" class="Course" column="courseId" not-null="true" lazy="false"/>
+		
+		<!-- problem是本类和Problem的多对一单向关联 -->
+		<many-to-one name="problem" class="Problem" column="problemId" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>     

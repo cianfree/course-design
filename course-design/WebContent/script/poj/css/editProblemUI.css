@@ -1,0 +1,14 @@
+
+table textarea {
+	width: 500px;
+	height: 100px;
+}
+
+table .content input {
+	width: 300px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid gray;
+	background-color: transparent;
+}

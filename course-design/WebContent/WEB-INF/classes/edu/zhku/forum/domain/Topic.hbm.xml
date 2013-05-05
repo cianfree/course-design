@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.forum.domain">
+	<class name="Topic" table="t_topic">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="title"/>
+		<property name="content" type="text" length="65536"/>
+		<property name="postTime" type="timestamp"/>
+		
+		<property name="type" />
+		<property name="replyCount" />
+		<property name="lastUpdateTime" type="timestamp" />
+		
+		<!-- author属性，是本类和User的多对一单向，基于外键，本类设置外键 -->
+		<many-to-one name="author" class="edu.zhku.fr.domain.User" column="authorId"/>
+		
+		<!-- forum属性，是本来和Forum的多对一 -->
+		<many-to-one name="forum" column="forumId" class="Forum"/>
+		
+		<!-- replies属性，是本类和Reply的一对多 -->
+		<set name="replies" cascade="delete">
+			<key column="topicId"/>
+			<one-to-many class="Reply"/>
+		</set>
+		
+		<!-- lastReply属性，是本类和Reply的一对一单向 ，基于外键，本来设置外键-->
+		<many-to-one name="lastReply" class="Reply" column="lastReplyId" unique="true"/>
+	</class>
+</hibernate-mapping>       

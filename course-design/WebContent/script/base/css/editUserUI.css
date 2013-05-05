@@ -1,0 +1,93 @@
+#userMgr,.userMgr {
+	float: right;
+	text-align: center;
+	padding-top: 3px;
+}
+
+#createExeBtn,.createExeBtn {
+	text-align: center;
+	border: 1px solid #4891C6;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #F0F0F0;
+	display: bold;
+}
+
+#createExeBtn:hover,.createExeBtn:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #4891C6;
+}
+
+#userInfo table {
+	border-collapse: collapse;
+	width: 70%;
+}
+
+#userInfo table caption {
+	border-collapse: collapse;
+	border-bottom: 5px solid #0970BB;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 30px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#userInfo table tfoot {
+	border-bottom: 5px solid #0970BB;
+}
+
+#userInfo table tfoot .opration,.opration {
+	text-align: center;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
+#userInfo table tfoot .opration .oprationButton,.oprationButton {
+	border: 1px solid blue;
+	margin-right: 10px;
+	width: 80px;
+	background-color: #F0F0F0;
+}
+
+#userInfo table tfoot .opration .oprationButton:hover,.oprationButton:hover {
+	background-color: #0970BB;
+	cursor: pointer;
+	color: white;
+}
+
+#userInfo table td {
+	border-collapse: collapse;;
+	height: 30px;
+}
+
+#userInfo table input[type="text"] {
+	padding-top: 5px;
+	padding-bottom: 1px;
+	font-size: 15px;
+	border-top: 0px;
+	border-bottom: 2px solid #F7B54A;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: transparent; 
+	width: 55%;
+}
+
+#roleForm textarea {
+	width: 55%;
+	height: 100px;
+}
+
+#userInfo table select {
+	width: 65%;
+	height: 100px;
+	border: 2px solid #F7B54A;
+}
+
+#userInfo table span {
+	color: red;
+}

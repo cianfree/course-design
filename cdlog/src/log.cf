@@ -1,0 +1,11 @@
+# 日志输出级别，五个级别[debug, info, warn, error, fatal]
+log.level=info
+
+# 日志输出目标，可选项[console, dir]
+log.target=console
+
+# 日志输出目录, 可选项: 当前应用根目录[user.dir], 自定义绝对路径[如D:/poj/log]
+log.target.dir=user.dir
+
+# 日期格式化
+log.date.pattern=yyyy-MM-dd HH:mm:ss

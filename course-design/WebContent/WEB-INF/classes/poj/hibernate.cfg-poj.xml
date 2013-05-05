@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 导入论坛模块 -->
+		<mapping resource="edu/zhku/poj/domain/Workout.hbm.xml" />
+		<mapping resource="edu/zhku/poj/domain/Problem.hbm.xml" />
+		<mapping resource="edu/zhku/poj/domain/Course.hbm.xml" />
+		<mapping resource="edu/zhku/poj/domain/Homework.hbm.xml" />
+		<mapping resource="edu/zhku/poj/domain/WorkoutHW.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

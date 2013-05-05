@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="E:/course/course-design/WebContent/script/common/jquery/jquery.js"></script>
+<link href="E:/course/course-design/WebContent/script/common/mypaging/css/mypaging.css" type="text/css" rel="stylesheet" />
+<link href="E:/course/course-design/WebContent/script/common/css/tables.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="E:/course/course-design/WebContent/script/common/mypaging/jquery.mypaging.js"></script>
+
+<style type="text/css">
+.mainContent {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.courseList {
+	float: left;
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	padding-left: 5px;
+	border-right: 2px solid blue;
+	text-align: left;
+}
+
+.list {
+	float: right;
+	width: 79%;
+}
+
+.studentList {
+	height: 300px;
+	position: relative;
+	margin-bottom: 2px;
+}
+
+.homeworkList {
+	height: 49%;
+}
+
+.title {
+	margin-top: 10px;
+	text-decoration: underline;
+	color: red;
+}
+
+.content {
+	padding-left: 5px; 
+	padding-top: 3px;
+}
+
+.manager {
+	float: right;
+	text-align: center;
+	padding-top: 3px;
+}
+
+/*
+table {
+	border-collapse: collapse;
+}
+
+table td{
+	border: 1px solid blue;
+}
+*/
+
+table caption {
+	text-align: center;
+}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		jQuery("#userPagingDiv").myPaging({
+			currentPage: 5,
+			pageCount: 30,
+			pageSize: 8,
+			totalRecord: 300,
+			showSize: 10,
+			callback: function(currentPage, pageSize) {
+				// 回调函数，当点击页码的时候就会执行这个函数
+				alert("currentPage: " + currentPage + "\npageSize: " + pageSize);
+			}
+		});
+		jQuery("#pagingDiv").myPaging({
+			currentPage: 5,
+			pageCount: 30,
+			pageSize: 8,
+			totalRecord: 300,
+			showSize: 10,
+			callback: function(currentPage, pageSize) {
+				// 回调函数，当点击页码的时候就会执行这个函数
+				//alert("currentPage: " + currentPage + "\npageSize: " + pageSize);
+				$("#homeworkList").html("");
+				var td = '<tr><td>编号</td><td>姓名</td><td width="10%">性别</td><td width="60%">删除  修改 作业情况</td></tr>';
+				$("#homeworkList").append($(td));
+				$("#homeworkList").append($(td));
+			}
+		});
+	})
+</script>
+</head>
+<body>
+
+<div class="mainContent">
+	<div class="courseList">
+		<div class="title">课程名称:</div>
+		<div class="content">这里是课程名称信息</div>
+		
+		<div class="title">创建者:</div>
+		<div class="content">这里是创建者信息</div>
+		
+		<div class="title">课程描述:</div>
+		<div class="content">
+			这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息这里是课程名称信息
+		</div>
+	</div>
+	
+	<div class="list">
+		<div class="studentList">
+			<table style="width: 100%; heigth: 100%;border: 1px solid blue;">
+				<caption>该课程的学生列表</caption>
+				<thead>
+					<tr>
+						<td width="10%">编号</td>
+						<td width="20%">姓名</td><!-- 如果没有姓名就显示帐号 -->
+						<td width="10%">性别</td>
+						<td width="60%">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>编号</td>
+						<td>姓名</td><!-- 如果没有姓名就显示帐号 -->
+						<td width="10%">性别</td>
+						<td width="60%">踢出 作业情况</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<span id="userPagingDiv"></span>
+							<div class="manager">
+								<a href="" class="abtn">添加</a>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>		
+		</div>
+		<div class="homeworkList">
+			<table style="width: 100%; heigth: 100%;border: 1px solid blue;">
+				<caption>该课程的作业列表</caption>
+				<thead>
+					<tr>
+						<td width="10%">编号</td>
+						<td width="20%">名称</td><!-- 如果没有姓名就显示帐号 -->
+						<td width="10%">描述</td>
+						<td width="60%">操作</td>
+					</tr>
+				</thead>
+				<tbody id="homeworkList">
+					<tr>
+						<td>编号</td>
+						<td>姓名</td><!-- 如果没有姓名就显示帐号 -->
+						<td width="10%">性别</td>
+						<td width="60%">删除  修改 作业情况</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<span id="pagingDiv"></span>
+							<div class="manager">
+								<a href="" class="abtn">添加</a>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

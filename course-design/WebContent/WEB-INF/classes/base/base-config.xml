@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program-config>
+	<language>cn</language>
+	<default-paging-size>10</default-paging-size>
+	<user-init-pwd>111111</user-init-pwd>
+	
+	<mail-servers>
+		<server type="163" host="smtp.163.com" domain="163.com" debug="true" auth="false" tp="smtp">
+			<account id="zhkupoj" password="137260xjq@"/>
+			<account id="zhkupoj_01" password="137260xjq@"/>
+			<account id="zhkupoj_02" password="137260xjq@"/>
+		</server>
+	</mail-servers>
+	
+	<activate-mail-template tempfile="base/activateMail.temp" subject="系统激活邮件"/>
+	
+	<!-- 配置超级管理员
+		account: 帐号
+		name:	   姓名，名字
+		password:密码
+		email:	   邮箱
+	-->
+	<super-admins>
+		<super-admin
+			account="admin"
+			name="超级管理员"
+			password="admin"
+			email="xiajiqiu1990@163.com"
+		/>
+		<super-admin
+			account="arvin"
+			name="超级管理员"
+			password="arvin"
+			email="gd_xiajiqiu@163.com"
+		/>
+	</super-admins>
+	
+	<!-- 配置默认角色,指的是注册的是，分配的默认角色
+		name: 角色名称
+		description: 角色描述
+	-->
+	<default-role name="普通用户" description="用户在注册时候就是以普通用户的身份"/>
+	
+	<!-- 固有角色配置，包含上面的默认角色，这里不用配置了，固有角色都是本系统所必须的角色  -->
+	<inherent-roles>
+		<!-- 
+		<inherent-role name="" description=""/>
+		-->
+	</inherent-roles>
+	
+	
+</program-config>

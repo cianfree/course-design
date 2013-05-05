@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MyPaging</title>
+<script type="text/javascript" src="jquery.js"></script>
+<!-- 引入自定义的分页插件 -->
+<link href="mypaging/css/mypaging.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="mypaging/jquery.mypaging.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		jQuery("#pagingDiv").myPaging({
+			currentPage: 2,
+			pageCount: 5,
+			pageSize: 10,
+			totalRecord: 50,
+			showSize: 8,
+			callback: function(currentPage, pageSize){
+				// 回调函数，当点击页码的时候就会执行这个函数
+				alert("currentPage: " + currentPage + "\npageSize: " + pageSize);
+			}
+		});
+	})
+</script>
+</head>
+<body>
+<div id="pagingDiv">
+</div>
+</body>
+</html>

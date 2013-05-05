@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--说明
+	module: 表示一个模块
+	module[name]: 模块名称，这个是唯一的
+	module[deploy]: 表示是否要在安装系统的时候安装本模块
+	module[depends]: 表示本模块依赖于其他的哪些模块，分隔符可以是 ';' ',' ':' '-' ' ' 
+	
+	module>>hibernate-cfg: 	表示该模块对应的Hibernate配置文件路径，只能接收一个文件，因为其他配置都可以通过import方式导入
+	module>>spring-cfg: 	表示该模块对应的 Spring配置文件路径，只能接收一个文件，因为其他配置都可以通过import方式导入
+	module>>privilege-cfg: 	表示该模块对应的权限数据配置文件，只能接收一个文件，因为其他配置都可以通过import方式导入
+	module>>listeners:		 表示该模块下的监听器
+			属性：
+				class: 	代表该监听器对应的类，该类必须要有一个public的空构造函数
+				deploy: 表示是否部署，即是否在web.xml中添加了该监听器，true表示添加了，那么在模块初始化的时候就不会在执行该监听器了，
+						否则就会反射创建对象，并执行contextInitialized方法来初始化本模块所需要的数据。
+	module>>roles: 表示该模块下的固有角色，但是没有被授权，授权动作必须在系统上线前进行
+			属性：
+				name: 角色名称，必须是整个系统中唯一的 
+				description: 角色的描述信息
+ -->
+<modules>
+	<module name="base" deploy="true">
+		<hibernate-cfg>classpath:base/hibernate.cfg-base.xml</hibernate-cfg>
+		<spring-cfg>classpath:base/applicationContext-base.xml</spring-cfg>
+		<privilege-cfg>classpath:base/privileges-base.xml</privilege-cfg>
+		<listeners>
+			<listener class="edu.zhku.base.listener.BaseContextLoaderListener"/>
+		</listeners>
+	</module>
+	
+	<!-- clear=false表示，在进行删除本模块的时候，不进行原来存在数据的清除 -->
+	<module name="poj" deploy="true" depends="base">
+		<hibernate-cfg>classpath:poj/hibernate.cfg-poj.xml</hibernate-cfg>
+		<spring-cfg>classpath:poj/applicationContext-poj.xml</spring-cfg>
+		<privilege-cfg>classpath:poj/privileges-poj.xml</privilege-cfg>
+		<listeners>
+			<listener class="edu.zhku.poj.listener.PojLoaderListener"/>
+		</listeners>
+		<roles>
+			<role name="学生用户" description="POJ特有角色，作为学生拥有教学相关的任务"/>
+			<role name="教师用户" description="POJ特有角色，作为教师拥有教学相关的任务"/>
+		</roles>
+	</module>
+	
+	<module name="forum" deploy="false" depends="base">
+		<hibernate-cfg>classpath:forum/hibernate.cfg-forum.xml</hibernate-cfg>
+		<spring-cfg>classpath:forum/applicationContext-forum.xml</spring-cfg>
+		<privilege-cfg>classpath:forum/privileges-forum.xml</privilege-cfg>
+	</module>
+</modules>

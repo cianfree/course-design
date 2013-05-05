@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<privs>
+	<!-- 一个模块作为一个权限组 -->
+	<top-privilege name="论坛系统" action="forumSystem">
+		<!-- 第二级别显示在下拉菜单中 -->
+		<priv name="论坛管理" action="forumMgr/forumList">
+			<!-- 第三级别的是在页面中出现的，一般只有三级 -->
+			<sub-priv name="板块列表" action="forumMgr/forumList" />
+			<sub-priv name="编辑板块" action="forumMgr/editForum" />
+			<sub-priv name="保存板块" action="forumMgr/saveForum" />
+			<sub-priv name="更新板块" action="forumMgr/updateForum" />
+			<sub-priv name="删除板块" action="forumMgr/deleteForum" />
+			<sub-priv name="板块上移" action="forumMgr/moveUp" />
+			<sub-priv name="板块下移" action="forumMgr/moveDown" />
+		</priv>
+		<priv name="进入论坛" action="forum/forumList">
+			<sub-priv name="所有板块" action="forum/forumList" />
+			<sub-priv name="主题列表" action="forum/forumShow" />
+			<sub-priv name="回复列表" action="forum/topicShow" />
+			<sub-priv name="保存主题" action="forum/saveTopic" />
+			<sub-priv name="删除主题" action="forum/deleteTopic" />
+			<sub-priv name="编辑主题" action="forum/editTopic" />
+			<sub-priv name="主题置顶" action="forum/topTopic" />
+			<sub-priv name="主题精华" action="forum/creamTopic" />
+			<sub-priv name="主题普通" action="forum/ordinaryTopic" />
+			<sub-priv name="主题移动" action="forum/moveTopic" />
+			<sub-priv name="回复主题" action="forum/replyTopic" />
+			<sub-priv name="修改回复" action="forum/updateReply" />
+		</priv>
+	</top-privilege>
+
+</privs>

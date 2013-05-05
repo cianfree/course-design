@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+		version="2.0">
+	<description>This is the self function definition for the ZHKU-POJ system</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>pf</short-name>
+	<uri>http://gz.cian.cn/pojfun</uri>
+	
+	<!-- hasRole(User, Role) function -->
+	<function>
+		<description>验证指定用户是否包含某个角色信息</description>
+		<name>hasRole</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean hasRole(edu.zhku.fr.domain.User, edu.zhku.fr.domain.Role)
+		</function-signature>
+	</function>
+	
+	<!-- hasPriv(User, Role) function -->
+	<function>
+		<description>验证指定用户是否包含某个角色信息</description>
+		<name>hasPriv</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean hasPriv(edu.zhku.fr.domain.User, java.lang.String)
+		</function-signature>
+	</function>
+	
+	<!-- 判断是否是男的 -->
+	<function>
+		<description>验证指定用户是男的还是女的</description>
+		<name>isMan</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean isMan(edu.zhku.fr.domain.User)
+		</function-signature>
+	</function>
+	
+	<!-- 判断是否是超级管理员 -->
+	<function>
+		<description>验证指定用户是否为超级管理员</description>
+		<name>isAdmin</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean isAdmin(edu.zhku.fr.domain.User)
+		</function-signature>
+	</function>
+	
+	<!-- 判断给定的权限id是否在指定的权限ID数组中 -->
+	<function>
+		<description>判断给定的权限id是否在指定的权限ID数组中</description>
+		<name>isInPrivs</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean isInPrivs(java.lang.Long, java.lang.Long[])
+		</function-signature>
+	</function>
+	
+	<!-- 判断给定的权限id是否在指定的权限ID数组中 -->
+	<function>
+		<description>判断两个字符串是否相等</description>
+		<name>isEqual</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			boolean isEqual(java.lang.String, java.lang.String)
+		</function-signature>
+	</function>
+	
+	<!-- 控制显示描述信息的长度 -->
+	<function>
+		<description>控制显示描述信息的长度</description>
+		<name>fixLen</name>
+		<function-class>edu.zhku.fr.priv.tag.Validate</function-class>
+		<function-signature>
+			String fixLen(java.lang.String, java.lang.Integer)
+		</function-signature>
+	</function>
+	
+	<!-- 判断是否是学生用户 -->
+	<function>
+		<description>判断用户是否是学生用户</description>
+		<name>isStudent</name>
+		<function-class>edu.zhku.poj.tag.PojFun</function-class>
+		<function-signature>
+			boolean isStudent(edu.zhku.fr.domain.User)
+		</function-signature>
+	</function>
+	
+	<!-- 判断是否是学生用户 -->
+	<function>
+		<description>判断用户是否可以进行参加课程操作</description>
+		<name>canAttend</name>
+		<function-class>edu.zhku.poj.tag.PojFun</function-class>
+		<function-signature>
+			boolean canAttend(edu.zhku.fr.domain.User, java.lang.Long)
+		</function-signature>
+	</function>
+	
+	<!-- 判断是否是学生用户 -->
+	<function>
+		<description>判断是不是我创建的课程</description>
+		<name>isMyCourse</name>
+		<function-class>edu.zhku.poj.tag.PojFun</function-class>
+		<function-signature>
+			boolean isMyCourse(edu.zhku.fr.domain.User, java.lang.Long)
+		</function-signature>
+	</function>
+	
+	<!-- 判断当前用户是否是给定课程的学生-->
+	<function>
+		<description>判断当前用户是否是给定课程的学生</description>
+		<name>isMyStudent</name>
+		<function-class>edu.zhku.poj.tag.PojFun</function-class>
+		<function-signature>
+			boolean isMyStudent(edu.zhku.fr.domain.User, java.lang.Long)
+		</function-signature>
+	</function>
+</taglib>

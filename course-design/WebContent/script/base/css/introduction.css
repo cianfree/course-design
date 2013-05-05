@@ -1,0 +1,106 @@
+#webIntro {
+	height: 450px;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#webIntro #left {
+	cursor: move;
+	float: left;
+	border: 1px solid #0970BD;
+	margin: 3px auto 3px 3px;
+	width: 350px;
+	height: 260px;
+	background-color: white;
+}
+
+#webIntro #left .title {
+	width: 345px;
+	border-bottom: 1px solid #0970BD;
+	background-color: #4891C6;
+	text-align: left;
+	color: white;
+	font-weight: bold;
+	height: 25px;
+	font-size: 13px;
+	padding-left: 5px;
+	padding-top: 8px;
+}
+
+#webIntro #left .content {
+	font-size: 13px;
+	text-align: left;
+	padding-top: 30px;
+	padding-left: 20px;
+}
+
+#webIntro #left .content .from {
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+#webIntro #left .content .copyright {
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+#webIntro #center {
+	float: left;
+	cursor: move;
+	border: 1px solid #0970BD;
+	margin: 3px auto 3px 3px;
+	width: 380px;
+	height: 260px;
+	background-color: white;
+}
+
+#webIntro #center .title {
+	width: 376px;
+	border-bottom: 1px solid #0970BD;
+	background-color: #4891C6;
+	text-align: left;
+	color: white;
+	font-weight: bold;
+	height: 25px;
+	font-size: 13px;
+	padding-left: 5px;
+	padding-top: 8px;
+}
+
+#webIntro #center .content {
+	font-size: 13px;
+	text-align: left;
+	padding-top: 30px;
+	padding-left: 20px;
+}
+
+#webIntro #right {
+	cursor: move;
+	float: left;
+	border: 1px solid #0970BD;
+	margin: 3px auto 3px 3px;
+	width: 33%;
+	height: 260px;
+	background-color: white;
+}
+
+#webIntro #right .title {
+	width: 99%;
+	border-bottom: 1px solid #0970BD;
+	background-color: #4891C6;
+	text-align: left;
+	color: white;
+	font-weight: bold;
+	height: 25px;
+	font-size: 13px;
+	padding-left: 5px;
+	padding-top: 8px;
+}
+
+#webIntro #right .content {
+	font-size: 13px;
+	text-align: left;
+	padding-top: 30px;
+	padding-left: 20px;
+}

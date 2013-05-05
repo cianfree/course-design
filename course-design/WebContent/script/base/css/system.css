@@ -1,0 +1,108 @@
+#keyword,.keyword {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid blue;
+	background-color: transparent;
+	font-size: 1.1em;
+	width: 300px;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+#roleId,.roleId {
+	width: 100px;
+	border: 1px solod blue;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 200px;
+}
+
+table div {
+	float: left;
+}
+
+table .conditions {
+	text-align: left;
+	padding-left: 3px;
+}
+
+table .searchBtn {
+	text-align: center;
+	float: right;
+	position: absolute;
+	right: 15px;
+	border: 1px solid blue;
+	width: 100px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	background-color: #F0F0F0;
+}
+
+table .searchABtn {
+	float: right;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	position: absolute;
+	right: 15px;
+}
+
+table .searchBtn:hover {
+	cursor: pointer;
+	color: white;
+	background-color: #4891C6;
+}
+
+
+.privTitle {
+	border: 1px solid #F7B54A;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	color: blue;
+}
+
+.privTree {
+	border: 1px solid #F7B54A;
+	margin-top: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+.privOpration {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.privBtn {
+	border: 1px solid blue;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	background-color: #F0F0F0;
+}
+
+.privBtn:hover {
+	background-color: #0970BB;
+	cursor: pointer;
+	color: white;
+}
+
+#privForm span:hover {
+	color: red;
+	cursor: pointer;
+}
+
+.queryAttr {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 2px solid blue;
+	background-color: transparent;	
+}

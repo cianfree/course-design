@@ -1,0 +1,44 @@
+#userInfo table {
+	min-width: 50%;
+	margin-bottom: 5px;
+}
+
+#userInfo table td {
+	height: 30px;
+}
+
+#userInfo table caption {
+	margin-bottom: 5px;
+	font-size: 18px;
+	border-bottom: 2px solid blue;
+	padding-bottom: 5px;
+}
+
+#userInfo table tfoot .opration {
+	border-top: 2px solid blue;
+	padding-top: 5px;
+}
+
+.userInfoBtn {
+	border: 1px solid blue;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: #F0F0F0;
+}
+
+.userInfoBtn:hover {
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+	
+}
+
+#userInfo table input[type="text"] {
+	width: 220px;
+	background-color: transparent;
+	border: 0px;
+	font-size: 15px;
+	border-bottom: 1px solid blue;
+}

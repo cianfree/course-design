@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.zhku.fr.domain">
+	<class name="Role" table="t_role">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name"/>
+		<property name="description"/>
+		<property name="type"/>
+		
+		<!-- 特殊属性 -->
+		<!-- privs属性，是本类和Privilege类的多对多单向关联 -->
+		<set name="privs" table="t_priv_role" lazy="true">
+			<key column="roleId"/>
+			<many-to-many class="Privilege" column="privId"/>
+		</set>
+		
+		<!-- roles属性是本类和Role的多对多关联关系 -->
+		<set name="users" table="t_role_user" lazy="true">
+			<key column="roleId" />
+			<many-to-many class="User" column="userId"/>
+		</set>
+	</class>
+</hibernate-mapping>       

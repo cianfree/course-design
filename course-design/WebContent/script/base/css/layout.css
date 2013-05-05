@@ -1,0 +1,297 @@
+
+body { 
+	font-family:Verdana; 
+	font-size:14px; 
+	margin:0 auto;
+	background-color: #F3F9FD;
+}
+
+#container {
+	margin:0 auto; 
+	width:100%;
+}
+
+#header { 
+	height: 63px; 
+	background: url(images/top_bg.gif) repeat-x;
+}
+
+#headerOp {
+	text-align: right;
+	padding-top: 20px;	
+}
+
+#headerOp .welcome, #headerOp a {
+	font-size: 18px;
+	margin-right: 10px;
+	color: white;
+}
+
+#headerOp a {
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#headerOp a:hover {
+	text-decoration: underline;
+	color: yellow;
+}
+
+input,button
+{
+	font-family:"Arial","Tahoma","微软雅黑","雅黑";
+	border:0px;
+	vertical-align:middle;
+	margin:8px;
+	line-height:18px;	
+	font-size:18px;
+}
+
+#logoutBtn
+{
+	width:137px;
+	height:33px;
+	line-height:18px;
+	font-size:15px;
+	background:url("images/button/bg26.jpg") no-repeat left top;
+	color:#FFF;
+}
+
+#logoutBtn:hover,#logoutBtn:focus {
+	width:137px;
+	height:33px;
+	line-height:18px;
+	font-size:15px;
+	background:url("images/button/bg26.jpg") no-repeat left -36px;
+	color:#FFF;
+	padding-bottom:4px;
+	cursor: pointer;
+}
+
+.logoutBtnDef {
+	width:137px;
+	height:33px;
+	line-height:18px;
+	font-size:15px;
+	background:url("images/button/bg26.jpg") no-repeat left top;
+	color:#FFF;
+}
+
+.logoutBtnOver {
+	width:137px;
+	height:33px;
+	line-height:18px;
+	font-size:15px;
+	background:url("images/button/bg26.jpg") no-repeat left -36px;
+	color:#FFF;
+	padding-bottom:4px;
+}
+
+#menu { 
+	height:36px; 
+	background: url(images/menu_bg.gif) repeat-x;
+	border-bottom: 1px blue;
+}
+
+#navigator {
+	padding-top: 3px;
+}
+
+#location {
+	text-align: right;
+	padding-top: 8px;
+	padding-right: 50px;
+	font-weight: bold;
+	color: white;
+}
+
+#location #currentOpt {
+	font-style: italic;
+}
+
+#location #currentOpt:hover {
+	color: yellow;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#mainContent { 
+	height:550px; 
+	background:#D8EDFC; 
+}
+
+#mainFrame {
+	height: 550px;
+	background: #F3F9FD
+}
+
+#viewframe {
+	height: 100%;
+}
+
+#footer { 
+	height:20px; 
+	background:transparent;
+}
+
+.bigTitle {
+	float: left;
+	color: #F1F9FE;
+	font-size:32px; 
+	font-style: italic;
+	font-family:Arial Black, Arial;
+	text-shadow: 0px 0px 20px yellow, 10px 10px 10px orange, red 5px -5px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+.smallTitle {
+	float: left;
+	color:#F1F9FE; 
+	font-size:16px; 
+	font-family:Arial;
+	margin-left: 30px;
+	margin-top: 30px;
+	font-style: italic;
+}
+
+.nav {
+	margin: 0px auto;
+	font: 14px verdana;
+	width: 60%;
+	margin-left: 20px;
+}
+
+.nav ul {
+	padding-right: 0px;
+	padding-left: 0px;
+	z-index: 100;
+	float: left;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 0px;
+	list-style-type: none
+}
+
+.nav ul li {
+	display: block;
+	float: left;
+	width: 81px;
+	line-height: 31px;
+	position: relative;
+	text-align: center
+}
+
+html .nav ul li {
+	float: left;
+	width: 81px;
+	line-height: 31px;
+	position: relative;
+	text-align: center
+}
+
+.nav ul li a {
+	display: block;
+	font-weight: bold;
+	width: 81px;
+	text-decoration: none
+}
+
+.nav ul li span {
+	display: block;
+	font-weight: bold;
+	width: 81px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.linkSpan {
+	display: block;
+	font-weight: bold;
+	width: 81px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.linkSpan:hover {
+	color: #ffff00
+}
+
+.simpleSpan {
+	display: block;
+	font-weight: bold;
+	width: 81px;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.simpleSpan:hover {
+	color: #ffff00
+}
+
+.nav ul li a:link {
+	color: #fff
+}
+
+.nav ul li a:visited {
+	color: #fff
+}
+
+.nav ul li a:hover {
+	color: #ffff00
+}
+
+.nav ul li ul {
+	left: 0px;
+	visibility: hidden;
+	position: absolute
+}
+
+.nav ul li ul li {
+	background: #4891C6;
+	float: left;
+	width: 81px;
+	line-height: 25px;
+	border-bottom: #96d47d 1px solid
+}
+
+.nav ul li ul li a {
+	display: block;
+	width: 81px;
+	text-decoration: none
+}
+
+.nav ul li ul li a:hover {
+	color: #ffff00
+}
+
+.nav ul li ul li ul {
+	top: 0px
+}
+
+.downarrowclass {
+	display: none;
+	position: absolute
+}
+
+.rightarrowclass {
+	display: none;
+	position: absolute
+}
+
+.ddshadow {
+	background: silver;
+	left: 0px;
+	width: 0px;
+	position: absolute;
+	top: 0px;
+	height: 0px
+}
+
+.toplevelshadow {
+	opacity: 0.8
+}
